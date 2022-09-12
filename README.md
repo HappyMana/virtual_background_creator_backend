@@ -1,24 +1,26 @@
-# README
+## 環境構築
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### 使用パッケージとそのバージョン
 
-Things you may want to cover:
+| パッケージ | バージョン |
+| ---------- | ---------- |
+| `ruby`     | 2.7.6    |
+| `rails`     | 6.0.6   |
 
-* Ruby version
+### パッケージのインストール
 
-* System dependencies
+```bash
+bundle install --path vendor/bundler
+```
 
-* Configuration
+### DBの作成
 
-* Database creation
+```bash
+rails db:create
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 動作確認
+port: 3001
+```bash
+rails s
+```
