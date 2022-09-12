@@ -24,3 +24,4 @@ port: 3001
 ```bash
 rails s
 ```
+http://localhost:3001/
