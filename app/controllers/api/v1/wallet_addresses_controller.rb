@@ -1,4 +1,4 @@
-class Api::V1::WalletAdressesController < ApplicationController
+class Api::V1::WalletAddressesController < ApplicationController
   before_action :authenticate_api_v1_user!
 
   def upload

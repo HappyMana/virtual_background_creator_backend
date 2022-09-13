@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
       get 'nfts', to: 'nfts#index'
 
-      post 'wallet_address', to: 'wallet_adresses#upload'
+      post 'wallet_address', to: 'wallet_addresses#upload'
     end
   end
 end
