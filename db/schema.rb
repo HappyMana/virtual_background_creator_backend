@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_12_081257) do
+ActiveRecord::Schema.define(version: 2022_09_13_072719) do
 
   create_table "pictures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.binary "binary_data"
@@ -42,14 +42,14 @@ ActiveRecord::Schema.define(version: 2022_09_12_081257) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
-  create_table "wallet_adresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "wallet_adress"
+  create_table "wallet_addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "wallet_address"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_wallet_adresses_on_user_id"
+    t.index ["user_id"], name: "index_wallet_addresses_on_user_id"
   end
 
   add_foreign_key "pictures", "users"
-  add_foreign_key "wallet_adresses", "users"
+  add_foreign_key "wallet_addresses", "users"
 end
