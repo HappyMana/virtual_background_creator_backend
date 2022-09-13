@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :pirctures
-  has_many :wallet_adresses
+  has_many :wallet_addresses
 end
