@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: virtual_background_creator_backend_production
-  username: virtual_background_creator_backend
-  password: <%= ENV['VIRTUAL_BACKGROUND_CREATOR_BACKEND_DATABASE_PASSWORD'] %>
+  database: heroku_db5764f552afe79
+  username: be0f287e78ef10
+  password: 482d13fa
