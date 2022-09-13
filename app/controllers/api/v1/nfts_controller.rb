@@ -6,16 +6,8 @@ class Api::V1::NftsController < ApplicationController
         status: 'SUCCESS',
         message: 'Loaded posts',
         data: [
-          {
-            "id": 1,
-            "binary_data": "https://fantop.jp/images/items/188-10/1/contents/0/thumbnail_mentori_mini_10.jpg",
-            "user_id": 1
-          }
-          {
-            "id": 2,
-            "binary_data": "https://fantop.jp/images/items/155-01/1/contents/0/item_thumbnail_zorori.jpg",
-            "user_id": 1
-          }
+          "https://fantop.jp/images/items/188-10/1/contents/0/thumbnail_mentori_mini_10.jpg",
+          "https://fantop.jp/images/items/155-01/1/contents/0/item_thumbnail_zorori.jpg"
         ]
       }
   end
