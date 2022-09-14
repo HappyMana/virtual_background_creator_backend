@@ -36,6 +36,6 @@ class Api::V1::PicturesController < ApplicationController
     end
 
     def pictures_params
-      params.require(:picture).permit(:binary_data).merge(user_id: user_id: current_api_v1_user.id)
+      params.require(:picture).permit(:binary_data).merge(user_id: current_api_v1_user.id)
     end
 end
