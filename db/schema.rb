@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_09_13_072719) do
 
   create_table "pictures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.binary "binary_data"
+    t.binary "binary_data", size: :medium
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
