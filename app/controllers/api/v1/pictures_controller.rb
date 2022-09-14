@@ -25,7 +25,7 @@ class Api::V1::PicturesController < ApplicationController
       render json: { status: 'SUCCESS', message: 'post local pictures', data: [] }
     end
   rescue
-    return render json: { status: 'SUCCESS', message: 'could not post local pictures', data: [] }
+    return render json: { status: 'ERROR', message: 'fail to post local pictures', data: [] }
   end
 
   private
