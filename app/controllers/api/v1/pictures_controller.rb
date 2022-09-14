@@ -17,9 +17,7 @@ class Api::V1::PicturesController < ApplicationController
       # 送られたすべての画像を保存する
       Picture.transaction do
         params[:binary_data].each do |binary_data|
-          pictures = Picture.new(pictures_params)
-          pictures.binary_data = binary_data
-          pictures.save!
+          current_api_v1_user.pictures.create!(binary_data: binary_data)
         end
       end
       render json: { status: 'SUCCESS', message: 'post local pictures', data: [] }
@@ -32,10 +30,6 @@ class Api::V1::PicturesController < ApplicationController
 
     # ローカル画像をDBから取得
     def get_local_pictures
-      pictures = Picture.where(user_id: current_api_v1_user.id).pluck(:binary_data)
-    end
-
-    def pictures_params
-      params.require(:picture).permit(:binary_data).merge(user_id: current_api_v1_user.id)
+      current_api_v1_user.pictures.all.pluck(:binary_data)
     end
 end
